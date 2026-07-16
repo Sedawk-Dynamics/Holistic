@@ -1,0 +1,138 @@
+/* Design tokens, reset and base typography.
+   Everything below is shared by every page. Anything that differs between
+   pages lives in that page's own stylesheet under its `.p-*` scope. */
+
+:root {
+  --purple: #3d1578;
+  --purple-deep: #2a0d56;
+  --purple-darkest: #1a0a35;
+  --purple-mid: #6b35c4;
+  --purple-soft: #5a2d8e;
+  --gold: #c89a2b;
+  --gold-light: #e0b84a;
+  --lavender: #b8a5e5;
+  --green: #76c043;
+  --bg: #fdfcff;
+  --bg-violet: #f5f0ff;
+  --bg-cream: #fff8e8;
+  --border: #e8def8;
+  --footer: #1a0a35;
+  --heading: var(--font-heading), Georgia, serif;
+  --body: var(--font-body), system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body);
+  color: var(--purple);
+  background: var(--bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Keyframes are global by name in CSS regardless of where they are declared,
+   so they are collected here once. Names are unique across the site. */
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(40px, 30px);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-30px) rotate(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(700px) rotate(320deg);
+    opacity: 0;
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 10px 26px rgba(61, 21, 120, 0.1);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(200, 154, 43, 0.4);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(0.84);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
