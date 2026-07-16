@@ -23,6 +23,10 @@ export function Header({
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // A section's link stays lit on its sub-pages too, e.g. the Nadi topic pages.
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     onScroll();
@@ -41,7 +45,7 @@ export function Header({
             <Link
               key={link.href}
               href={link.href}
-              className={pathname === link.href ? "active" : undefined}
+              className={isActive(link.href) ? "active" : undefined}
               onClick={() => setMenuOpen(false)}
             >
               {link.label}

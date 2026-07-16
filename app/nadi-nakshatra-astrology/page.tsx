@@ -7,6 +7,7 @@ import { BackToTop } from "@/components/BackToTop";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 import { FormNoticeButton } from "@/components/FormNoticeButton";
+import { PredictGrid } from "@/components/PredictGrid";
 import { CONTACT } from "@/lib/site";
 import "./nadi.css";
 
@@ -181,52 +182,6 @@ const FORMULA_STEPS: { icon: ReactNode; k: string; h: string }[] = [
     icon: <path d="M5 12h14M13 6l6 6-6 6" />,
     k: "producing",
     h: "Life Event",
-  },
-];
-
-const PREDICT: { icon: ReactNode; h: string; p: string }[] = [
-  {
-    icon: (
-      <>
-        <rect x="2" y="7" width="20" height="14" rx="2" />
-        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-      </>
-    ),
-    h: "Career & Business",
-    p: "Suitable profession, job vs business, foreign opportunities, growth periods, and change windows.",
-  },
-  {
-    icon: (
-      <path d="M2 9.5a5.5 5.5 0 0 1 9.59-3.68.56.56 0 0 0 .82 0A5.5 5.5 0 0 1 22 9.5c0 2.3-1.5 4-3 5.5l-5.5 5.3a2 2 0 0 1-3 0L5 15c-1.5-1.5-3-3.2-3-5.5" />
-    ),
-    h: "Marriage",
-    p: "Timing, nature of partner, compatibility, relationship dynamics, and potential challenges.",
-  },
-  {
-    icon: (
-      <>
-        <circle cx="9" cy="7" r="3" />
-        <circle cx="17" cy="9" r="2" />
-        <path d="M3 21c0-3 2.5-5 6-5s6 2 6 5M15 21c0-2 1-3.5 3-3.5" />
-      </>
-    ),
-    h: "Children & Family",
-    p: "Childbirth timing, relationship with children, education patterns, and family karma.",
-  },
-  {
-    icon: (
-      <>
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4" />
-      </>
-    ),
-    h: "Finance & Wealth",
-    p: "Wealth creation windows, investment periods, risk cycles, and expansion timing.",
-  },
-  {
-    icon: <path d="M12 3v18M5 8c3 0 7 1 7 4M19 8c-3 0-7 1-7 4" />,
-    h: "Spiritual Growth",
-    p: "Life-purpose revelation, awakening timing, and the soul's evolutionary direction.",
   },
 ];
 
@@ -614,21 +569,7 @@ export default function NadiPage() {
               across every major dimension of life.
             </p>
           </Reveal>
-          <Reveal className="plist">
-            {PREDICT.map((cell) => (
-              <div className="pcell" key={cell.h}>
-                <div className="in">
-                  <div className="ic">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3D1578" strokeWidth="1.7">
-                      {cell.icon}
-                    </svg>
-                  </div>
-                  <h4>{cell.h}</h4>
-                  <p>{cell.p}</p>
-                </div>
-              </div>
-            ))}
-          </Reveal>
+          <PredictGrid />
         </div>
       </section>
 

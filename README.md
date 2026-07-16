@@ -77,6 +77,20 @@ The hand-written scroll JS from the original pages is now components:
 `Reveal` and `CountUp` take tuning props because home animates on slightly
 different thresholds than the other pages; their defaults match the other pages.
 
+### The Nadi guidance topics
+
+The 16 cards in the Nadi page's "What It Can Predict" section, and the 16 pages
+behind them, are all driven by one file: `lib/predict.tsx`. Each entry carries a
+slug, card title, page title, teaser and icon — plus an optional `body: string[]`
+that the topic page renders as paragraphs once you fill it in.
+
+Card artwork lives in `public/images/predict/<slug>.jpg`; see the README there for
+the filenames and licensing. A topic with no image falls back to a gradient tile
+and its icon, so a partial set is fine.
+
+The grid shows 4 cards and loads 4 more per click (`PAGE_SIZE` in
+`components/PredictGrid.tsx`).
+
 ### Fonts and images
 
 Fonts are self-hosted via `next/font` (Cormorant Garamond + Inter) and every image

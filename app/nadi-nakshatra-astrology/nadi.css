@@ -1486,3 +1486,244 @@
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
+
+/* ============ VERTICALS GRID (#predict) ============ */
+.p-nadi .vgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.p-nadi .vcard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(61, 21, 120, 0.05);
+  transition: 0.35s;
+}
+.p-nadi .vcard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(61, 21, 120, 0.16);
+  border-color: rgba(200, 154, 43, 0.4);
+}
+.p-nadi .vcard-art {
+  position: relative;
+  height: 172px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--gold-light);
+  background: linear-gradient(160deg, var(--purple), var(--purple-deep));
+}
+.p-nadi .vcard-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 28% 24%, rgba(200, 154, 43, 0.38), transparent 60%),
+    radial-gradient(circle at 78% 82%, rgba(184, 165, 229, 0.3), transparent 62%);
+}
+.p-nadi .vcard-ring {
+  position: absolute;
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(229, 181, 60, 0.42);
+  animation: spin 40s linear infinite;
+}
+.p-nadi .vcard:nth-child(even) .vcard-ring {
+  animation-direction: reverse;
+  animation-duration: 52s;
+}
+.p-nadi .vcard-art svg {
+  position: relative;
+  z-index: 1;
+  transition: 0.35s;
+}
+.p-nadi .vcard:hover .vcard-art svg {
+  transform: scale(1.08);
+}
+.p-nadi .vcard-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px 24px 26px;
+}
+.p-nadi .vcard-body h4 {
+  font-family: var(--heading);
+  font-size: 23px;
+  color: var(--purple);
+  margin-bottom: 9px;
+}
+.p-nadi .vcard-body p {
+  font-size: 14px;
+  color: rgba(61, 21, 120, 0.62);
+  margin-bottom: 18px;
+  /* Keeps every card's teaser to the same three lines, so a row stays even. */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.p-nadi .vcard-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--purple-mid);
+  transition: 0.25s;
+}
+.p-nadi .vcard:hover .vcard-link {
+  gap: 12px;
+  color: var(--gold);
+}
+.p-nadi .vmore {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+.p-nadi .vmore-count {
+  font-weight: 500;
+  opacity: 0.7;
+  font-size: 13px;
+}
+@media (max-width: 980px) {
+  .p-nadi .vgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .p-nadi .vgrid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
+/* ============ TOPIC PAGE ============ */
+.p-nadi .vhero {
+  margin-top: 80px;
+  padding: 96px 0 64px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 60% at 50% 0%, #ede6fa, transparent 60%),
+    linear-gradient(180deg, #f8f5f0, #fdfcff);
+}
+.p-nadi .vhero .wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 840px;
+  text-align: center;
+}
+.p-nadi .vhero .vmark {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 22px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  background: linear-gradient(160deg, var(--purple), var(--purple-deep));
+  box-shadow: 0 14px 34px rgba(61, 21, 120, 0.28);
+}
+.p-nadi .vhero h1 {
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+  color: var(--purple);
+  margin-bottom: 18px;
+}
+.p-nadi .vhero .lead {
+  font-size: 18px;
+  color: #5a4a6a;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.p-nadi .vbody .wrap {
+  max-width: 780px;
+}
+.p-nadi .vbody p {
+  font-size: 16.5px;
+  color: rgba(61, 21, 120, 0.72);
+  margin-bottom: 18px;
+}
+.p-nadi .vnav {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 44px;
+}
+.p-nadi .vsiblings {
+  background: var(--bg-violet);
+}
+.p-nadi .vsib-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.p-nadi .vsib {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 16px;
+  border-radius: 13px;
+  border: 1px solid transparent;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--purple);
+  transition: 0.25s;
+}
+.p-nadi .vsib svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.p-nadi .vsib:hover {
+  background: #fff;
+  border-color: rgba(200, 154, 43, 0.4);
+  box-shadow: 0 10px 26px rgba(61, 21, 120, 0.08);
+  transform: translateX(4px);
+}
+@media (max-width: 860px) {
+  .p-nadi .vsib-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .p-nadi .vsib-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Until a topic has body copy, the CTA row is all this section holds. */
+.p-nadi .vnav-bare {
+  margin-top: 0;
+}
+.p-nadi .vbody:has(.vnav-bare) {
+  padding-top: 56px;
+}
+
+/* Topic artwork. The gradient underneath shows through until a real image
+   exists at /images/predict/<slug>.jpg. */
+.p-nadi .vcard-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s;
+}
+.p-nadi .vcard:hover .vcard-img {
+  transform: scale(1.08);
+}
+.p-nadi .vcard-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(61, 21, 120, 0.05), rgba(42, 13, 86, 0.45));
+}

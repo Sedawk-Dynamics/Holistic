@@ -1,6 +1,7 @@
 "use client";
 
 import type { ImgHTMLAttributes } from "react";
+import { useImageStatus } from "./useImageStatus";
 
 type Props = ImgHTMLAttributes<HTMLImageElement> & { alt: string };
 
@@ -9,13 +10,7 @@ type Props = ImgHTMLAttributes<HTMLImageElement> & { alt: string };
  * own background showing rather than a broken-image icon.
  */
 export function HideOnErrorImg({ alt, ...rest }: Props) {
-  return (
-    <img
-      alt={alt}
-      {...rest}
-      onError={(e) => {
-        e.currentTarget.style.display = "none";
-      }}
-    />
-  );
+  const { ref, ok, onError } = useImageStatus();
+  if (!ok) return null;
+  return <img ref={ref} alt={alt} {...rest} onError={onError} />;
 }
