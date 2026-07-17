@@ -12,8 +12,14 @@ import "../nadi.css";
 
 type Params = { params: Promise<{ slug: string }> };
 
+/**
+ * career-guidance has its own hand-built page at ./career-guidance, which wins
+ * the route; leaving it here too would prerender a second, conflicting page.
+ */
 export function generateStaticParams() {
-  return PREDICT_TOPICS.map((t) => ({ slug: t.slug }));
+  return PREDICT_TOPICS.filter((t) => t.slug !== "career-guidance").map((t) => ({
+    slug: t.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
