@@ -22,6 +22,29 @@ export type PredictTopic = {
 export const topicImage = (t: PredictTopic) =>
   t.image ?? `/images/predict/${t.slug}.jpg`;
 
+/**
+ * Slugs that have a hand-built page under their own folder. The generic [slug]
+ * route must skip these so it doesn't prerender a second, conflicting page.
+ */
+export const DEDICATED_SLUGS = new Set([
+  "career-guidance",
+  "financial-prosperity",
+  "education-guidance",
+  "litigation-guidance",
+  "property-guidance",
+  "vehicle-guidance",
+  "health-guidance",
+  "travel-guidance",
+  "marriage-guidance",
+  "relationship-guidance",
+  "divorce-guidance",
+  "corporate-guidance",
+  "longevity-guidance",
+  "birth-time-rectification",
+  "muhurat-guidance",
+  "remedial-measures",
+]);
+
 export const PREDICT_TOPICS: PredictTopic[] = [
   {
     slug: "career-guidance",

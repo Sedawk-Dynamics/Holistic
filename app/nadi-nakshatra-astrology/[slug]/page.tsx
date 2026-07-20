@@ -6,18 +6,19 @@ import { NadiFooter } from "@/components/NadiFooter";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { BackToTop } from "@/components/BackToTop";
 import { Reveal } from "@/components/Reveal";
-import { PREDICT_TOPICS, getTopic } from "@/lib/predict";
+import { PREDICT_TOPICS, DEDICATED_SLUGS, getTopic } from "@/lib/predict";
 import { ROUTES } from "@/lib/site";
 import "../nadi.css";
 
 type Params = { params: Promise<{ slug: string }> };
 
 /**
- * career-guidance has its own hand-built page at ./career-guidance, which wins
- * the route; leaving it here too would prerender a second, conflicting page.
+ * Slugs in DEDICATED_SLUGS have their own hand-built page under their own folder,
+ * which wins the route; leaving them here too would prerender a second,
+ * conflicting page.
  */
 export function generateStaticParams() {
-  return PREDICT_TOPICS.filter((t) => t.slug !== "career-guidance").map((t) => ({
+  return PREDICT_TOPICS.filter((t) => !DEDICATED_SLUGS.has(t.slug)).map((t) => ({
     slug: t.slug,
   }));
 }
