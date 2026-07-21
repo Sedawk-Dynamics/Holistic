@@ -86,19 +86,13 @@ export const PREDICT_TOPICS: PredictTopic[] = [
     ),
   },
   {
-    slug: "litigation-guidance",
-    title: "Litigation Guidance",
-    fullTitle: "Litigation Guidance Through Nadi Nakshatra Astrology",
+    slug: "marriage-guidance",
+    title: "Marriage Guidance",
+    fullTitle: "Marriage Guidance Through Nadi Nakshatra Astrology",
     teaser:
-      "Case outcome, favourable timing, settlement windows, and the periods to avoid escalation.",
+      "Timing, nature of partner, compatibility, relationship dynamics, and potential challenges.",
     icon: (
-      <>
-        <path d="M12 3v18" />
-        <path d="M5 7h14" />
-        <path d="m5 7-3 6h6Z" />
-        <path d="m19 7-3 6h6Z" />
-        <path d="M8 21h8" />
-      </>
+      <path d="M2 9.5a5.5 5.5 0 0 1 9.59-3.68.56.56 0 0 0 .82 0A5.5 5.5 0 0 1 22 9.5c0 2.3-1.5 4-3 5.5l-5.5 5.3a2 2 0 0 1-3 0L5 15c-1.5-1.5-3-3.2-3-5.5" />
     ),
   },
   {
@@ -153,13 +147,19 @@ export const PREDICT_TOPICS: PredictTopic[] = [
     ),
   },
   {
-    slug: "marriage-guidance",
-    title: "Marriage Guidance",
-    fullTitle: "Marriage Guidance Through Nadi Nakshatra Astrology",
+    slug: "litigation-guidance",
+    title: "Litigation Guidance",
+    fullTitle: "Litigation Guidance Through Nadi Nakshatra Astrology",
     teaser:
-      "Timing, nature of partner, compatibility, relationship dynamics, and potential challenges.",
+      "Case outcome, favourable timing, settlement windows, and the periods to avoid escalation.",
     icon: (
-      <path d="M2 9.5a5.5 5.5 0 0 1 9.59-3.68.56.56 0 0 0 .82 0A5.5 5.5 0 0 1 22 9.5c0 2.3-1.5 4-3 5.5l-5.5 5.3a2 2 0 0 1-3 0L5 15c-1.5-1.5-3-3.2-3-5.5" />
+      <>
+        <path d="M12 3v18" />
+        <path d="M5 7h14" />
+        <path d="m5 7-3 6h6Z" />
+        <path d="m19 7-3 6h6Z" />
+        <path d="M8 21h8" />
+      </>
     ),
   },
   {
