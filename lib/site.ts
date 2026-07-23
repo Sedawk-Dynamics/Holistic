@@ -14,6 +14,11 @@ export const NAV_LINKS = [
   { href: ROUTES.about, label: "About" },
   { href: ROUTES.nadi, label: "Nadi Astrology" },
   { href: ROUTES.mentalHealth, label: "Mental Health" },
+  {
+    href: "https://bachflowertherapy.hhpf.in/",
+    label: "Bach Flower",
+    external: true,
+  },
   { href: ROUTES.contact, label: "Contact" },
 ];
 

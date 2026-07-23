@@ -41,16 +41,28 @@ export function Header({
           <img src={LOGO} alt={LOGO_ALT} />
         </Link>
         <nav className={`links${menuOpen ? " open" : ""}`}>
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={isActive(link.href) ? "active" : undefined}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={isActive(link.href) ? "active" : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </nav>
         <div className="nav-cta">
           <a href={LMS_URL} className="pill pill-purple">
