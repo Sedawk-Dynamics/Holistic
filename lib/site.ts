@@ -9,6 +9,9 @@ export const ROUTES = {
   contact: "/contact",
 } as const;
 
+
+
+
 export const NAV_LINKS = [
   { href: ROUTES.home, label: "Home" },
   { href: ROUTES.about, label: "About" },
