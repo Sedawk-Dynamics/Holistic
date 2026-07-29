@@ -1,4 +1,6 @@
 export const LOGO = "/images/hh-logo.png";
+/** Horizontal wordmark used in the fixed header; footers keep the square mark. */
+export const LOGO_HEADER = "/images/hh-horizontal.png";
 export const LOGO_ALT = "Holistic Healing Pathways Foundation";
 
 export const ROUTES = {

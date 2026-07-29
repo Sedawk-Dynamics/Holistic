@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { LMS_URL, LOGO, LOGO_ALT, NAV_LINKS, ROUTES } from "@/lib/site";
+import { LMS_URL, LOGO_ALT, LOGO_HEADER, NAV_LINKS, ROUTES } from "@/lib/site";
 
 type HeaderProps = {
   /** Where the logo points. Home links to its own hero anchor. */
@@ -38,7 +38,7 @@ export function Header({
     <header id="hdr" className={scrolled ? "scrolled" : undefined}>
       <div className="wrap nav">
         <Link className="brand" href={brandHref}>
-          <img src={LOGO} alt={LOGO_ALT} />
+          <img src={LOGO_HEADER} alt={LOGO_ALT} />
         </Link>
         <nav className={`links${menuOpen ? " open" : ""}`}>
           {NAV_LINKS.map((link) =>
