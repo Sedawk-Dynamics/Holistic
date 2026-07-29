@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SocialLinks } from "./SocialLinks";
-import { CONTACT, LOGO, ROUTES } from "@/lib/site";
+import { CONTACT, LEGAL_LINKS, LOGO, ROUTES } from "@/lib/site";
 
 /** Footer used by the Nadi Nakshatra Astrology page — three columns, page-local links. */
 export function NadiFooter() {
@@ -34,6 +34,13 @@ export function NadiFooter() {
         </div>
         <div className="fbar">
           <p>© 2026 Holistic Healing Pathways Foundation. All rights reserved.</p>
+          <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
+            {LEGAL_LINKS.map((link) => (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            ))}
+          </div>
           <p>Next batch · 27 June 2026</p>
         </div>
       </div>

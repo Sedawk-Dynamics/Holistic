@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { SocialLinks } from "./SocialLinks";
-import { CONTACT, FOOTER_BLURB, LOGO, LOGO_ALT, ROUTES } from "@/lib/site";
+import { CONTACT, FOOTER_BLURB, LEGAL_LINKS, LOGO, LOGO_ALT, ROUTES } from "@/lib/site";
 
 function Arrow() {
   return (
@@ -105,9 +105,11 @@ export function HomeFooter() {
         <div className="fbar">
           <p>© 2026 Holistic Healing Pathways Foundation. All rights reserved.</p>
           <div className="fl">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Disclaimer</a>
+            {LEGAL_LINKS.map((link) => (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

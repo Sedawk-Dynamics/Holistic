@@ -7,7 +7,17 @@ export const ROUTES = {
   nadi: "/nadi-nakshatra-astrology",
   mentalHealth: "/mental-health",
   contact: "/contact",
+  privacy: "/privacy-policy",
+  terms: "/terms-of-service",
+  refund: "/refund-cancellation-policy",
 } as const;
+
+/** Policy links shown in every footer's bottom bar. */
+export const LEGAL_LINKS = [
+  { href: ROUTES.privacy, label: "Privacy Policy" },
+  { href: ROUTES.terms, label: "Terms of Service" },
+  { href: ROUTES.refund, label: "Cancellation Policy" },
+] as const;
 
 
 

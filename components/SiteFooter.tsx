@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SocialLinks } from "./SocialLinks";
-import { CONTACT, LMS_URL, LOGO, ROUTES } from "@/lib/site";
+import { CONTACT, LEGAL_LINKS, LMS_URL, LOGO, ROUTES } from "@/lib/site";
 
 /** Footer used by About, Mental Health and Contact. */
 export function SiteFooter() {
@@ -41,10 +41,12 @@ export function SiteFooter() {
         </div>
         <div className="fbar">
           <p>© 2026 Holistic Healing Pathways Foundation. All rights reserved.</p>
-          <div style={{ display: "flex", gap: 18 }}>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Disclaimer</a>
+          <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
+            {LEGAL_LINKS.map((link) => (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
