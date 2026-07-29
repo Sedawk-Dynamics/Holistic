@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage, type LegalSection } from "@/components/LegalPage";
-import { CONTACT, ROUTES } from "@/lib/site";
+import { CONTACT, LEGAL_EMAIL, ROUTES } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Holistic Healing Pathways Foundation",
@@ -207,7 +207,7 @@ const SECTIONS: LegalSection[] = [
           <b>not a replacement for medical, legal, or psychiatric advice</b>.
           Please consult a qualified professional where necessary. For any
           queries, contact us at{" "}
-          <a href={CONTACT.emailHref}>{CONTACT.email}</a> or{" "}
+          <a href={LEGAL_EMAIL.href}>{LEGAL_EMAIL.address}</a> or{" "}
           <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>.
         </p>
       </div>

@@ -4,7 +4,7 @@ import { Header } from "./Header";
 import { SiteFooter } from "./SiteFooter";
 import { ScrollProgress } from "./ScrollProgress";
 import { BackToTop } from "./BackToTop";
-import { CONTACT } from "@/lib/site";
+import { CONTACT, LEGAL_EMAIL } from "@/lib/site";
 import "@/app/legal.css";
 
 export type LegalSection = {
@@ -83,7 +83,7 @@ export function LegalPage({
               </p>
               <div className="crow">
                 <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
-                <a href={CONTACT.emailHref}>{CONTACT.email}</a>
+                <a href={LEGAL_EMAIL.href}>{LEGAL_EMAIL.address}</a>
                 <a href={CONTACT.websiteHref}>{CONTACT.website}</a>
               </div>
             </div>

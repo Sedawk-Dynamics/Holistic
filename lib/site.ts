@@ -12,6 +12,12 @@ export const ROUTES = {
   refund: "/refund-cancellation-policy",
 } as const;
 
+/** Contact e-mail shown on the legal pages (Privacy, Terms, Refund & Cancellation). */
+export const LEGAL_EMAIL = {
+  address: "info@hhpf.in",
+  href: "mailto:info@hhpf.in",
+} as const;
+
 /** Policy links shown in every footer's bottom bar. */
 export const LEGAL_LINKS = [
   { href: ROUTES.privacy, label: "Privacy Policy" },
