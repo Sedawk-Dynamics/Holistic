@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SocialLinks } from "./SocialLinks";
 import { CONTACT, LEGAL_LINKS, LMS_URL, LOGO, ROUTES } from "@/lib/site";
 
-/** Footer used by About, Mental Health and Contact. */
+/** Footer used by About, Psychology and Contact. */
 export function SiteFooter() {
   return (
     <footer>
@@ -21,7 +21,7 @@ export function SiteFooter() {
             <h4>Pathways</h4>
             <Link href="/#services">Bach Flower Therapy</Link>
             <Link href={ROUTES.nadi}>Nadi Nakshatra Astrology</Link>
-            <Link href={ROUTES.mentalHealth}>Mental Health Therapy</Link>
+            <Link href={ROUTES.psychology}>Psychology</Link>
             <Link href="/#products">Shop</Link>
           </div>
           <div className="fcol">

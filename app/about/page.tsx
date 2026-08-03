@@ -93,7 +93,7 @@ const PATHWAYS = [
   },
   {
     pn: "03",
-    href: "/mental-health",
+    href: "/psychology",
     h: "Mental Health Therapy",
     p: "Confidential support for clarity, resilience, and strength.",
   },

@@ -43,11 +43,11 @@ export function Header({
         <nav className={`links${menuOpen ? " open" : ""}`}>
           {NAV_LINKS.map((link) =>
             link.external ? (
+              // Plain anchor, same tab: the href is another origin, so there is
+              // nothing for Link to prefetch or client-navigate.
               <a
                 key={link.href}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}

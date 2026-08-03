@@ -6,7 +6,7 @@ import { BackToTop } from "@/components/BackToTop";
 import { Reveal } from "@/components/Reveal";
 import { FormNoticeButton } from "@/components/FormNoticeButton";
 import { CONTACT } from "@/lib/site";
-import "./mental-health.css";
+import "./psychology.css";
 
 export const metadata: Metadata = {
   title: "Mental Health Therapy | Holistic Healing Pathways Foundation",
@@ -61,9 +61,9 @@ const INTERESTS = [
   "General Inquiry",
 ];
 
-export default function MentalHealthPage() {
+export default function PsychologyPage() {
   return (
-    <div className="p-mental-health">
+    <div className="p-psychology">
       <ScrollProgress />
       <Header />
 
@@ -304,19 +304,43 @@ export default function MentalHealthPage() {
       {/* ===== YOUR GUIDE ===== */}
       <section className="alt" id="guide">
         <div className="wrap">
-          <Reveal className="guide">
-            <div className="ga">
-              <img src="/images/dr-nikunj-walia.jpeg" alt="Dr. Nikunj Walia" />
-              NW
-            </div>
+          {/* The bio runs long, so the portrait sits at the top of the column
+              rather than centred against it. */}
+          <Reveal className="guide" style={{ alignItems: "flex-start" }}>
+            <div className="ga">SW</div>
             <div>
               <span className="eyebrow">Your Guide</span>
-              <h3 style={{ marginTop: 8 }}>Dr. Nikunj Walia</h3>
-              <div className="gr">Founder &amp; Director</div>
+              <h3 style={{ marginTop: 8 }}>Shreyasi Walia</h3>
               <p>
-                With 25+ years across mental health therapy, Bach Flower Therapy, and holistic
-                guidance, Dr. Walia brings both professional depth and genuine warmth to every
-                session - walking beside you toward clarity and strength.
+                <strong>Shreyasi Walia</strong> is a psychologist, mental health therapist, and
+                meditation teacher, who believes that lasting change begins with feeling truly
+                seen, heard, and understood.
+              </p>
+              <p>
+                With a Master&apos;s degree in Psychology and over seven years of experience
+                working in the field of mental health and emotional well-being, she supports
+                adolescents and adults through life&apos;s many challenges, including anxiety,
+                stress, relationship difficulties, self-esteem issues, emotional overwhelm,
+                grief, life transitions, and personal growth.
+              </p>
+              <p>
+                Her therapeutic approach is warm and deeply person-centred. She works to
+                understand the experiences and beliefs that shape a person&apos;s inner world.
+                She believes that every behaviour serves a purpose, and together with her
+                clients, she gently explores the deeper needs beneath those behavioural patterns
+                to create meaningful and lasting change.
+              </p>
+              <p>
+                Shreyasi also draws upon her extensive experience as an Art of Living meditation
+                teacher and mental health facilitator. Where appropriate and aligned with a
+                client&apos;s goals, she integrates evidence-based psychological practices with
+                meditation and breathwork to support holistic well-being. Her work is grounded
+                in the belief that science and spirituality can complement one another, helping
+                individuals cultivate resilience and inner peace.
+              </p>
+              <p>
+                She strives to create a safe and compassionate space where clients can explore
+                their thoughts and emotions at their own pace.
               </p>
             </div>
           </Reveal>

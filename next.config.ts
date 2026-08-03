@@ -15,8 +15,10 @@ const nextConfig: NextConfig = {
         destination: "/nadi-nakshatra-astrology",
         permanent: true,
       },
-      { source: "/mental-health.html", destination: "/mental-health", permanent: true },
+      { source: "/mental-health.html", destination: "/psychology", permanent: true },
       { source: "/contact.html", destination: "/contact", permanent: true },
+      // The Mental Health page was renamed to Psychology; keep its old URL alive.
+      { source: "/mental-health", destination: "/psychology", permanent: true },
     ];
   },
 };

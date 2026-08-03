@@ -50,7 +50,7 @@ const PATHWAYS: { href: string; icon: ReactNode; title: string; body: string }[]
     body: "Precise life prediction and timing from your birth chart.",
   },
   {
-    href: ROUTES.mentalHealth,
+    href: ROUTES.psychology,
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3D9B1C" strokeWidth="1.6">
         <path d="M12 18V5" />

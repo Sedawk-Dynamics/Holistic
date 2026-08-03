@@ -25,7 +25,7 @@ npm run typecheck
 | `/`                         | `index.html`                    |
 | `/about`                    | `about.html`                    |
 | `/nadi-nakshatra-astrology` | `Nadi_Nakshatra_Astrology.html` |
-| `/mental-health`            | `mental-health.html`            |
+| `/psychology`               | `mental-health.html`            |
 | `/contact`                  | `contact.html`                  |
 
 The old `.html` URLs permanently redirect to the new routes (see `next.config.ts`),
@@ -40,7 +40,7 @@ app/
   page.tsx          home        + home.css
   about/            page.tsx    + about.css
   contact/          page.tsx    + contact.css
-  mental-health/    page.tsx    + mental-health.css
+  psychology/       page.tsx    + psychology.css
   nadi-nakshatra-astrology/     page.tsx + nadi.css
 components/         Header, footers, and the scroll/reveal behaviour
 lib/site.ts         nav, routes, contact details, shared copy
@@ -127,7 +127,7 @@ These five things were changed on purpose, because each was a bug:
   an empty gradient tile. Drop a file at `public/images/healing-oil.jpg` and it
   will appear; nothing else needs changing.
 - **Enquiry forms don't submit.** As in the original, the submit buttons show a
-  notice pointing at `nikunjhhp@gmail.com` (`FORM_NOTICE` in `lib/site.ts`). Wire
+  notice pointing at `info@hhpf.in` (`FORM_NOTICE` in `lib/site.ts`). Wire
   them to Formspree, a route handler, or a server action when you're ready.
 - **Newsletter sign-up** in the home footer is likewise not wired up.
 - **Testimonials and team roles are placeholders** — the original marks both as

@@ -43,7 +43,7 @@ function FlowerIcon({ size, stroke, width }: { size: number; stroke: string; wid
 }
 
 const STATS = [
-  { to: 700, suffix: "+", label: "Lives Touched", sub: "Healed naturally" },
+  { to: 20, suffix: "k+", label: "Lives Touched", sub: "Healed naturally" },
   { to: 38, label: "Flower Remedies", sub: "Dr. Bach's system" },
   { to: 3, label: "Specialized Paths", sub: "Under one roof" },
   { to: 100, suffix: "%", label: "Natural & Ethical", sub: "Safe for all ages" },

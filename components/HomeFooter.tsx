@@ -48,7 +48,7 @@ export function HomeFooter() {
             <h4>Our Services</h4>
             <ArrowLink href="#services">Bach Flower Therapy</ArrowLink>
             <ArrowLink href="#services">Nadi Nakshatra Astrology</ArrowLink>
-            <ArrowLink href="#services">Mental Health Therapy</ArrowLink>
+            <ArrowLink href="#services">Psychology</ArrowLink>
             <ArrowLink href="#services">Training &amp; Courses</ArrowLink>
             <ArrowLink href="#products">Healing Products</ArrowLink>
           </div>
