@@ -31,7 +31,7 @@ export function HomeFooter() {
           <div className="fbrand">
             <img src={LOGO} alt={LOGO_ALT} />
             <p>{FOOTER_BLURB}</p>
-            <SocialLinks networks={["Facebook", "Instagram", "YouTube", "X"]} />
+            <SocialLinks />
           </div>
 
           <div className="fcol">
@@ -70,6 +70,15 @@ export function HomeFooter() {
                 </svg>
               </span>
               {CONTACT.email}
+            </a>
+            <a href={CONTACT.websiteHref} className="row" style={{ marginBottom: 14 }}>
+              <span className="ic">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C89A2B" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20" />
+                </svg>
+              </span>
+              {CONTACT.website}
             </a>
             <div className="row">
               <span className="ic">
