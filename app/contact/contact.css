@@ -1198,6 +1198,22 @@
 .p-contact .fcol a:hover {
   color: var(--gold);
 }
+/* Connect column: each contact line carries an icon tile, as on the home footer. */
+.p-contact .fconnect .row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.p-contact .fconnect .row .ic {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 .p-contact .fbar {
   border-top: 1px solid rgba(200, 154, 43, 0.25);
   padding: 22px 0;

@@ -9,9 +9,9 @@ import { CONTACT } from "@/lib/site";
 import "./psychology.css";
 
 export const metadata: Metadata = {
-  title: "Mental Health Therapy | Holistic Healing Pathways Foundation",
+  title: "Psychology | Holistic Healing Pathways Foundation",
   description:
-    "Mental Health Therapy at Holistic Healing Pathways Foundation - professional, confidential one-on-one support for anxiety, stress, low confidence, and emotional well-being. You don't have to walk this path alone.",
+    "Psychology at Holistic Healing Pathways Foundation - professional, confidential one-on-one support for anxiety, stress, low confidence, and emotional well-being. You don't have to walk this path alone.",
 };
 
 /** Cards in a row fade in one after another; the first has no delay. */
@@ -54,7 +54,7 @@ const STEPS = [
 ];
 
 const INTERESTS = [
-  "Mental Health Therapy",
+  "Psychology",
   "Bach Flower Therapy",
   "Nadi Nakshatra Astrology",
   "Training / Courses",
@@ -71,7 +71,7 @@ export default function PsychologyPage() {
       <section className="mh-hero" id="home">
         <div className="wrap">
           <div className="breath" aria-hidden="true" />
-          <p className="eyebrow">Mental Health Therapy</p>
+          <p className="eyebrow">Psychology</p>
           <h1 style={{ marginTop: 14 }}>
             You don&apos;t have to walk
             <span className="l2 ggold">this path alone.</span>

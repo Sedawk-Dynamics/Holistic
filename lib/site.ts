@@ -39,7 +39,11 @@ export const NAV_LINKS = [
     label: "Bach Flower",
     external: true,
   },
-  { href: ROUTES.nadi, label: "Nadi Astrology" },
+  {
+    href: "https://nadi-nakshatra.vercel.app/",
+    label: "Nadi Astrology",
+    external: true,
+  },
   { href: ROUTES.psychology, label: "Psychology" },
   { href: ROUTES.contact, label: "Contact" },
 ];

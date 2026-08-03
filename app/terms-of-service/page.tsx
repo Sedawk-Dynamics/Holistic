@@ -5,7 +5,7 @@ import { CONTACT, LEGAL_EMAIL, ROUTES } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms of Service | Holistic Healing Pathways Foundation",
   description:
-    "Terms and conditions for using the consultation and training services of Holistic Healing Pathways Foundation — Bach Flower Therapy, Nadi Astrology, and Psychological Mental Health Therapy.",
+    "Terms and conditions for using the consultation and training services of Holistic Healing Pathways Foundation — Bach Flower Therapy, Nadi Astrology, and Psychology.",
 };
 
 const SECTIONS: LegalSection[] = [
@@ -18,7 +18,7 @@ const SECTIONS: LegalSection[] = [
           Holistic Healing Pathways Foundation (&ldquo;we&rdquo;,
           &ldquo;our&rdquo;, &ldquo;us&rdquo;) provides consultation and
           training services in Bach Flower Therapy, Nadi Astrology, and
-          Psychological Mental Health Therapy.
+          Psychology.
         </p>
         <p>
           By using our website, booking a consultation, or enrolling in any
@@ -37,7 +37,7 @@ const SECTIONS: LegalSection[] = [
         <ul>
           <li>Bach Flower Therapy (consultation &amp; training)</li>
           <li>Nadi Astrology (consultation &amp; training)</li>
-          <li>Psychological Mental Health Therapy (consultation)</li>
+          <li>Psychology (consultation)</li>
         </ul>
         <div className="callout">
           <p>
@@ -220,7 +220,7 @@ export default function TermsOfServicePage() {
     <LegalPage
       titleLead="Terms of"
       titleAccent="Service"
-      sub="The terms and conditions that govern your use of Holistic Healing Pathways Foundation's website, consultations in Bach Flower Therapy, Nadi Astrology, and Mental Health Therapy, and our training programs."
+      sub="The terms and conditions that govern your use of Holistic Healing Pathways Foundation's website, consultations in Bach Flower Therapy, Nadi Astrology, and Psychology, and our training programs."
       updated="29 July 2026"
       sections={SECTIONS}
       related={[

@@ -13,7 +13,7 @@ import "./contact.css";
 export const metadata: Metadata = {
   title: "Contact Us | Holistic Healing Pathways Foundation",
   description:
-    "Contact Holistic Healing Pathways Foundation - book a session for Bach Flower Therapy, Nadi Nakshatra Astrology, or Mental Health Therapy. Noida and online worldwide. Call +91 98714 68883.",
+    "Contact Holistic Healing Pathways Foundation - book a session for Bach Flower Therapy, Nadi Nakshatra Astrology, or Psychology. Noida and online worldwide. Call +91 98714 68883.",
 };
 
 /** Cards in a row fade in one after another; the first has no delay. */
@@ -60,7 +60,7 @@ const PATHWAYS: { href: string; icon: ReactNode; title: string; body: string }[]
         <path d="M6 18a4 4 0 0 1-2-7.46" />
       </svg>
     ),
-    title: "Mental Health Therapy",
+    title: "Psychology",
     body: "Confidential support for clarity, resilience, and strength.",
   },
 ];
@@ -206,8 +206,8 @@ export default function ContactPage() {
               </div>
               <div className="field">
                 <label htmlFor="contact-interest">I&apos;m interested in</label>
-                <select id="contact-interest" defaultValue="Mental Health Therapy">
-                  <option>Mental Health Therapy</option>
+                <select id="contact-interest" defaultValue="Psychology">
+                  <option>Psychology</option>
                   <option>Bach Flower Therapy</option>
                   <option>Nadi Nakshatra Astrology</option>
                   <option>Training / Courses</option>

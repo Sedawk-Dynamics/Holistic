@@ -13,7 +13,7 @@ import "./about.css";
 export const metadata: Metadata = {
   title: "About Us | Holistic Healing Pathways Foundation",
   description:
-    "About Holistic Healing Pathways Foundation - our story, mission, vision, values, founder Dr. Nikunj Walia, and the three pathways of Bach Flower Therapy, Nadi Astrology, and Mental Health Therapy.",
+    "About Holistic Healing Pathways Foundation - our story, mission, vision, values, founder Dr. Nikunj Walia, and the three pathways of Bach Flower Therapy, Nadi Astrology, and Psychology.",
 };
 
 const FOUNDER_PHOTO = "/images/dr-nikunj-walia.jpeg";
@@ -31,7 +31,7 @@ const MVV = [
   {
     k: "01 — Mission",
     lbl: "To heal & guide",
-    p: "To provide specialized, ethical services in Bach Flower Therapy, Nadi Astrology, and Mental Health Therapy - helping individuals address emotional challenges, gain life insights, and improve overall well-being through focused, personalized guidance.",
+    p: "To provide specialized, ethical services in Bach Flower Therapy, Nadi Astrology, and Psychology - helping individuals address emotional challenges, gain life insights, and improve overall well-being through focused, personalized guidance.",
   },
   {
     k: "02 — Vision",
@@ -49,7 +49,7 @@ const WHY = [
   {
     n: "01",
     h: "Three Services, One Platform",
-    p: "Bach Flower Therapy, Nadi Astrology, and Mental Health Therapy as independent, focused services.",
+    p: "Bach Flower Therapy, Nadi Astrology, and Psychology as independent, focused services.",
   },
   {
     n: "02",
@@ -94,7 +94,7 @@ const PATHWAYS = [
   {
     pn: "03",
     href: "/psychology",
-    h: "Mental Health Therapy",
+    h: "Psychology",
     p: "Confidential support for clarity, resilience, and strength.",
   },
 ];
@@ -412,7 +412,7 @@ export default function AboutPage() {
                 <label htmlFor="about-interest">I&apos;m interested in</label>
                 <select id="about-interest" defaultValue="General Inquiry">
                   <option>General Inquiry</option>
-                  <option>Mental Health Therapy</option>
+                  <option>Psychology</option>
                   <option>Bach Flower Therapy</option>
                   <option>Nadi Nakshatra Astrology</option>
                   <option>Training / Courses</option>

@@ -311,7 +311,7 @@ const WELLBEING = [
 const FSPECS = [
   { b: "Nadi Nakshatra Astrology", s: "Specialist in Nakshatra-based event timing" },
   { b: "Bach Flower Therapy", s: "Certified practitioner & educator" },
-  { b: "Mental Health Therapy", s: "Psychological awareness, holistically applied" },
+  { b: "Psychology", s: "Psychological awareness, holistically applied" },
   { b: "Founder — HHPF", s: "Building a global community of healers" },
 ];
 

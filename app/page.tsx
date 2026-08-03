@@ -64,7 +64,7 @@ const WHY = [
   {
     n: "01",
     h: "Three Services, One Platform",
-    p: "Bach Flower Therapy, Nadi Astrology, and Mental Health Therapy as independent, focused services — choose exactly what you need.",
+    p: "Bach Flower Therapy, Nadi Astrology, and Psychology as independent, focused services — choose exactly what you need.",
   },
   {
     n: "02",
@@ -113,7 +113,7 @@ const TESTIMONIALS = [
       "The therapy sessions gave me a safe, non-judgmental space to finally talk. I left every session feeling lighter and genuinely supported.",
     initials: "MP",
     name: "Meera P.",
-    role: "Mental Health Therapy Client",
+    role: "Psychology Client",
   },
 ];
 
@@ -163,7 +163,7 @@ export default function HomePage() {
                 </span>
                 <span>
                   <i style={{ background: "var(--green)" }} />
-                  Mental Health Therapy
+                  Psychology
                 </span>
               </div>
             </div>
@@ -341,7 +341,7 @@ export default function HomePage() {
                       <path d="M6 18a4 4 0 0 1-2-7.46" />
                     </svg>
                   </div>
-                  <h3>Mental Health Therapy</h3>
+                  <h3>Psychology</h3>
                   <p>
                     Professional, confidential support for emotional challenges — building
                     clarity, resilience, and inner strength.
@@ -438,7 +438,7 @@ export default function HomePage() {
                 <h3>Our Mission</h3>
                 <p>
                   To provide specialized, ethical services in Bach Flower Therapy, Nadi
-                  Astrology, and Mental Health Therapy — helping individuals address emotional
+                  Astrology, and Psychology — helping individuals address emotional
                   challenges, gain life insights, and improve wellbeing.
                 </p>
               </Reveal>
@@ -716,7 +716,7 @@ export default function HomePage() {
                   <select id="interest" defaultValue="Bach Flower Therapy">
                     <option>Bach Flower Therapy</option>
                     <option>Nadi Nakshatra Astrology</option>
-                    <option>Mental Health Therapy</option>
+                    <option>Psychology</option>
                     <option>Training / Courses</option>
                     <option>Healing Products</option>
                     <option>General Inquiry</option>
