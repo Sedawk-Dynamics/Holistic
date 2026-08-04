@@ -50,6 +50,18 @@ export const NAV_LINKS = [
 
 export const LMS_URL = "https://lms.hhpf.in/";
 
+/**
+ * Absolute destinations for the footer's link columns. These deliberately leave
+ * the current origin — a click from staging or localhost lands on the live site.
+ */
+export const SITE = {
+  home: "https://www.hhpf.in/",
+  about: "https://www.hhpf.in/about",
+  psychology: "https://www.hhpf.in/psychology",
+  bachFlower: "https://bachflowertherapy.hhpf.in/",
+  nadi: "https://nadi-nakshatra.vercel.app/",
+} as const;
+
 export const CONTACT = {
   phone: "+91 98714 68883",
   phoneHref: "tel:+919871468883",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { NadiFooter } from "@/components/NadiFooter";
+import { HomeFooter } from "@/components/HomeFooter";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { BackToTop } from "@/components/BackToTop";
 import { Reveal } from "@/components/Reveal";
@@ -438,7 +438,7 @@ export function TopicPage({ content }: { content: TopicContent }) {
         </div>
       </section>
 
-      <NadiFooter />
+      <HomeFooter />
       <BackToTop showAfter={700} />
     </div>
   );

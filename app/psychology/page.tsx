@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
-import { SiteFooter } from "@/components/SiteFooter";
+import { HomeFooter } from "@/components/HomeFooter";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { BackToTop } from "@/components/BackToTop";
 import { Reveal } from "@/components/Reveal";
@@ -456,7 +456,7 @@ export default function PsychologyPage() {
         </div>
       </section>
 
-      <SiteFooter />
+      <HomeFooter />
       <BackToTop showAfter={700} />
     </div>
   );

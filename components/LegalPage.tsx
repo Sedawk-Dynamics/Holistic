@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Header } from "./Header";
-import { SiteFooter } from "./SiteFooter";
+import { HomeFooter } from "./HomeFooter";
 import { ScrollProgress } from "./ScrollProgress";
 import { BackToTop } from "./BackToTop";
 import { CONTACT, LEGAL_EMAIL } from "@/lib/site";
@@ -101,7 +101,7 @@ export function LegalPage({
         </div>
       </section>
 
-      <SiteFooter />
+      <HomeFooter />
       <BackToTop showAfter={700} />
     </div>
   );

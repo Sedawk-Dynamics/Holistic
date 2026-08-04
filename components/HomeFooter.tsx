@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { SocialLinks } from "./SocialLinks";
-import { CONTACT, FOOTER_BLURB, LEGAL_LINKS, LOGO, LOGO_ALT, ROUTES } from "@/lib/site";
+import { CONTACT, FOOTER_BLURB, LEGAL_LINKS, LOGO, LOGO_ALT, ROUTES, SITE } from "@/lib/site";
 
 function Arrow() {
   return (
@@ -13,6 +13,16 @@ function Arrow() {
 }
 
 function ArrowLink({ href, children }: { href: string; children: ReactNode }) {
+  // Absolute hrefs point at other origins (or the live domain), so there is
+  // nothing for Link to prefetch or client-navigate.
+  if (href.startsWith("http")) {
+    return (
+      <a href={href}>
+        <Arrow />
+        {children}
+      </a>
+    );
+  }
   return (
     <Link href={href}>
       <Arrow />
@@ -21,7 +31,7 @@ function ArrowLink({ href, children }: { href: string; children: ReactNode }) {
   );
 }
 
-/** Footer used by the home page — the only one with the newsletter sign-up. */
+/** The site's footer — used by every page. */
 export function HomeFooter() {
   return (
     <footer>
@@ -36,20 +46,21 @@ export function HomeFooter() {
 
           <div className="fcol">
             <h4>Quick Links</h4>
-            <ArrowLink href="#home">Home</ArrowLink>
-            <ArrowLink href="#about">About</ArrowLink>
-            <ArrowLink href="#services">Services</ArrowLink>
-            <ArrowLink href="#products">Products</ArrowLink>
-            <ArrowLink href="#testimonials">Testimonials</ArrowLink>
+            <ArrowLink href={SITE.home}>Home</ArrowLink>
+            <ArrowLink href={SITE.about}>About</ArrowLink>
+            {/* Section anchors are root-relative: this footer is on every page. */}
+            <ArrowLink href="/#services">Services</ArrowLink>
+            <ArrowLink href="/#products">Products</ArrowLink>
+            <ArrowLink href="/#testimonials">Testimonials</ArrowLink>
             <ArrowLink href={ROUTES.contact}>Contact</ArrowLink>
           </div>
 
           <div className="fcol">
             <h4>Our Services</h4>
-            <ArrowLink href="#services">Bach Flower Therapy</ArrowLink>
-            <ArrowLink href="#services">Nadi Nakshatra Astrology</ArrowLink>
-            <ArrowLink href="#services">Psychology</ArrowLink>
-            <ArrowLink href="#products">Healing Products</ArrowLink>
+            <ArrowLink href={SITE.bachFlower}>Bach Flower Therapy</ArrowLink>
+            <ArrowLink href={SITE.nadi}>Nadi Nakshatra Astrology</ArrowLink>
+            <ArrowLink href={SITE.psychology}>Psychology</ArrowLink>
+            <ArrowLink href="/#products">Healing Products</ArrowLink>
           </div>
 
           <div className="fcol fconnect">
@@ -88,23 +99,6 @@ export function HomeFooter() {
                 </svg>
               </span>
               Noida, UP &amp; Online Worldwide
-            </div>
-            <div className="news">
-              <label htmlFor="newsletter-email">Healing Insights Newsletter</label>
-              <div className="nrow">
-                <input
-                  id="newsletter-email"
-                  type="email"
-                  placeholder="Your email address"
-                  aria-label="Newsletter email"
-                />
-                <button aria-label="Subscribe">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2">
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
             </div>
           </div>
         </div>

@@ -1391,12 +1391,14 @@
 .p-home .fcol a:hover {
   color: var(--gold);
 }
-.p-home .fcol a svg {
+/* Link columns slide their arrow in on hover. The Connect column is excluded —
+   its contact icons are permanent, not a hover affordance. */
+.p-home .fcol:not(.fconnect) a svg {
   opacity: 0;
   transform: translateX(-6px);
   transition: 0.25s;
 }
-.p-home .fcol a:hover svg {
+.p-home .fcol:not(.fconnect) a:hover svg {
   opacity: 1;
   transform: none;
 }
@@ -1417,49 +1419,6 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-.p-home .news label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 12px;
-  display: block;
-  margin-top: 22px;
-}
-.p-home .news .nrow {
-  display: flex;
-  gap: 8px;
-}
-.p-home .news input {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 11px 14px;
-  color: #fff;
-  font-family: var(--body);
-  font-size: 14px;
-}
-.p-home .news input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-}
-.p-home .news input:focus {
-  outline: none;
-  border-color: rgba(200, 154, 43, 0.5);
-}
-.p-home .news button {
-  padding: 11px 14px;
-  border-radius: 12px;
-  background: var(--gold);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.p-home .news button:hover {
-  background: var(--gold-light);
 }
 .p-home .fdivider {
   height: 1px;

@@ -1134,8 +1134,9 @@
 
 /* ============ FOOTER ============ */
 .p-about footer {
-  background: var(--footer);
+  background: var(--purple-darkest);
   color: #fff;
+  overflow: hidden;
 }
 .p-about .ftop {
   height: 1px;
@@ -1143,29 +1144,30 @@
 }
 .p-about .fgrid {
   display: grid;
-  grid-template-columns: 1.7fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
   gap: 40px;
-  padding: 62px 0;
+  padding: 64px 0;
 }
 .p-about .fbrand img {
-  height: 46px;
+  height: 48px;
+  width: auto;
   filter: brightness(0) invert(1);
   opacity: 0.9;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .p-about .fbrand p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
   max-width: 300px;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 .p-about .socials {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 .p-about .socials a {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1182,27 +1184,45 @@
   transform: translateY(-3px);
 }
 .p-about .fcol h4 {
+  font-family: var(--body);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  color: #fff;
+  margin-bottom: 20px;
 }
-.p-about .fcol a {
-  display: block;
+.p-about .fcol a,
+.p-about .fcol .fitem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
   margin-bottom: 11px;
-  transition: 0.2s;
+  transition: 0.25s;
 }
 .p-about .fcol a:hover {
   color: var(--gold);
 }
-/* Connect column: each contact line carries an icon tile, as on the home footer. */
+/* Link columns slide their arrow in on hover. The Connect column is excluded —
+   its contact icons are permanent, not a hover affordance. */
+.p-about .fcol:not(.fconnect) a svg {
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: 0.25s;
+}
+.p-about .fcol:not(.fconnect) a:hover svg {
+  opacity: 1;
+  transform: none;
+}
 .p-about .fconnect .row {
   display: flex;
   align-items: center;
   gap: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin-bottom: 14px;
 }
 .p-about .fconnect .row .ic {
   width: 32px;
@@ -1214,23 +1234,34 @@
   justify-content: center;
   flex-shrink: 0;
 }
+.p-about .fdivider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 154, 43, 0.3), transparent);
+}
 .p-about .fbar {
-  border-top: 1px solid rgba(200, 154, 43, 0.25);
-  padding: 22px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  padding: 24px 0;
 }
-.p-about .fbar p,
-.p-about .fbar a {
+.p-about .fbar p {
+  color: rgba(255, 255, 255, 0.35);
   font-size: 12.5px;
-  color: rgba(255, 255, 255, 0.4);
 }
-.p-about .fbar a:hover {
+.p-about .fbar .fl {
+  display: flex;
+  gap: 20px;
+}
+.p-about .fbar .fl a {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 12.5px;
+}
+.p-about .fbar .fl a:hover {
   color: var(--gold);
 }
-@media (max-width: 820px) {
+@media (max-width: 860px) {
   .p-about .fgrid {
     grid-template-columns: 1fr 1fr;
   }

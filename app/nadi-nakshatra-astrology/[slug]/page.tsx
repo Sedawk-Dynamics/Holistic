@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
-import { NadiFooter } from "@/components/NadiFooter";
+import { HomeFooter } from "@/components/HomeFooter";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { BackToTop } from "@/components/BackToTop";
 import { Reveal } from "@/components/Reveal";
@@ -117,7 +117,7 @@ export default async function TopicPage({ params }: Params) {
         </div>
       </section>
 
-      <NadiFooter />
+      <HomeFooter />
       <BackToTop showAfter={700} />
     </div>
   );

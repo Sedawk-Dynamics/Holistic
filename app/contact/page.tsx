@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { SiteFooter } from "@/components/SiteFooter";
+import { HomeFooter } from "@/components/HomeFooter";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { BackToTop } from "@/components/BackToTop";
 import { Reveal } from "@/components/Reveal";
@@ -278,7 +278,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <SiteFooter />
+      <HomeFooter />
       <BackToTop showAfter={700} />
     </div>
   );
