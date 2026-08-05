@@ -9,7 +9,7 @@ import { HeroPetals } from "@/components/HeroPetals";
 import { ContactParticles } from "@/components/ContactParticles";
 import { FormNoticeButton } from "@/components/FormNoticeButton";
 import { HideOnErrorImg } from "@/components/HideOnErrorImg";
-import { CONTACT } from "@/lib/site";
+import { CONTACT, SITE } from "@/lib/site";
 import "./home.css";
 
 export const metadata: Metadata = {
@@ -269,7 +269,7 @@ export default function HomePage() {
                       Training: Level 1, 2 &amp; Advanced
                     </li>
                   </ul>
-                  <a href="#contact" className="svc-link" style={{ color: "var(--purple)" }}>
+                  <a href={SITE.bachFlower} className="svc-link" style={{ color: "var(--purple)" }}>
                     Begin healing →
                   </a>
                 </div>
@@ -314,7 +314,7 @@ export default function HomePage() {
                       Courses, beginner to advanced
                     </li>
                   </ul>
-                  <a href="#contact" className="svc-link" style={{ color: "var(--gold)" }}>
+                  <a href={SITE.nadi} className="svc-link" style={{ color: "var(--gold)" }}>
                     Seek guidance →
                   </a>
                 </div>
@@ -360,7 +360,7 @@ export default function HomePage() {
                       Safe, confidential environment
                     </li>
                   </ul>
-                  <a href="#contact" className="svc-link" style={{ color: "var(--green)" }}>
+                  <a href={SITE.psychology} className="svc-link" style={{ color: "var(--green)" }}>
                     Find support →
                   </a>
                 </div>

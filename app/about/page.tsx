@@ -24,7 +24,7 @@ const stagger = (i: number) => (i === 0 ? undefined : (i as 1 | 2 | 3));
 const FACTS = [
   { n: "3", t: "Pathways" },
   { n: "25+", t: "Years" },
-  { n: "700+", t: "Lives Touched" },
+  { n: "20k+", t: "Lives Touched" },
 ];
 
 const MVV = [
