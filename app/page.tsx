@@ -196,7 +196,7 @@ export default function HomePage() {
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
                   </svg>
                 </span>
-                700+ Lives Touched
+                20k+ Lives Touched
               </div>
             </div>
           </div>
