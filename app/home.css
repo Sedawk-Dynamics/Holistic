@@ -944,7 +944,8 @@
   border-color: rgba(200, 154, 43, 0.4);
 }
 .p-home .prod-img {
-  height: 150px;
+  /* The product mockups are square; 150px cropped away nearly half the bottle. */
+  height: 210px;
   overflow: hidden;
   position: relative;
   background: linear-gradient(135deg, #efe8f8, #f8f1e2);
@@ -971,6 +972,25 @@
 .p-home .prod p {
   font-size: 13.5px;
   color: rgba(61, 21, 120, 0.6);
+}
+.p-home .prod-buy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--purple), var(--purple-mid));
+  color: #fff;
+  font-family: var(--body);
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.p-home .prod-buy:hover {
+  background: var(--gold);
+  box-shadow: 0 10px 24px rgba(200, 154, 43, 0.35);
 }
 @media (max-width: 900px) {
   .p-home .prod-grid {

@@ -8,7 +8,6 @@ import { CountUp } from "@/components/CountUp";
 import { HeroPetals } from "@/components/HeroPetals";
 import { ContactParticles } from "@/components/ContactParticles";
 import { FormNoticeButton } from "@/components/FormNoticeButton";
-import { HideOnErrorImg } from "@/components/HideOnErrorImg";
 import { CONTACT, SITE } from "@/lib/site";
 import "./home.css";
 
@@ -47,6 +46,29 @@ const STATS = [
   { to: 38, label: "Flower Remedies", sub: "Dr. Bach's system" },
   { to: 3, label: "Specialized Paths", sub: "Under one roof" },
   { to: 100, suffix: "%", label: "Natural & Ethical", sub: "Safe for all ages" },
+];
+
+const PRODUCTS = [
+  {
+    img: "/images/bach-flower-remedies.webp",
+    h: "Bach Flower Remedies",
+    p: "Customized essence blends matched to your unique emotional state.",
+  },
+  {
+    img: "/images/healing-oil.webp",
+    h: "Healing Oil",
+    p: "A soothing Bach Flower blend to calm and restore everyday balance.",
+  },
+  {
+    img: "/images/hair-growth-oil.webp",
+    h: "Hair Growth Oil",
+    p: "An Ayurvedic Jadibuti formulation to nourish and strengthen hair.",
+  },
+  {
+    img: "/images/pain-relief-oil.webp",
+    h: "Pain Relief Oil",
+    p: "A targeted Bach Flower blend formulated for natural relief.",
+  },
 ];
 
 const MARQUEE_CHIPS = [
@@ -513,43 +535,21 @@ export default function HomePage() {
               </p>
             </Reveal>
             <div className="prod-grid">
-              <Reveal className="prod">
-                <div className="prod-img">
-                  <img src="/images/bach-flower-remedies.jpg" alt="" />
-                </div>
-                <div className="prod-body">
-                  <h4>Bach Flower Remedies</h4>
-                  <p>Customized essence blends matched to your unique emotional state.</p>
-                </div>
-              </Reveal>
-              <Reveal className="prod" delay={1}>
-                <div className="prod-img">
-                  {/* Source image 404s upstream; drop a file at this path to restore it. */}
-                  <HideOnErrorImg src="/images/healing-oil.jpg" alt="" />
-                </div>
-                <div className="prod-body">
-                  <h4>Healing Oil</h4>
-                  <p>A soothing Bach Flower blend to calm and restore everyday balance.</p>
-                </div>
-              </Reveal>
-              <Reveal className="prod" delay={2}>
-                <div className="prod-img">
-                  <img src="/images/hair-growth-oil.jpg" alt="" />
-                </div>
-                <div className="prod-body">
-                  <h4>Hair Growth Oil</h4>
-                  <p>An Ayurvedic Jadibuti formulation to nourish and strengthen hair.</p>
-                </div>
-              </Reveal>
-              <Reveal className="prod" delay={3}>
-                <div className="prod-img">
-                  <img src="/images/pain-relief-oil.jpg" alt="" />
-                </div>
-                <div className="prod-body">
-                  <h4>Pain Relief Oil</h4>
-                  <p>A targeted Bach Flower blend formulated for natural relief.</p>
-                </div>
-              </Reveal>
+              {PRODUCTS.map((product, i) => (
+                <Reveal className="prod" key={product.h} delay={stagger(i)}>
+                  <div className="prod-img">
+                    <img src={product.img} alt="" />
+                  </div>
+                  <div className="prod-body">
+                    <h4>{product.h}</h4>
+                    <p>{product.p}</p>
+                    {/* Placeholder until the Razorpay payment links exist. */}
+                    <a href="#" className="prod-buy">
+                      Buy now
+                    </a>
+                  </div>
+                </Reveal>
+              ))}
             </div>
             <p
               style={{
