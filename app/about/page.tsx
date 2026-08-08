@@ -126,7 +126,7 @@ const TEAM: {
   {
     initials: "SW",
     name: "Shreyasi Walia",
-    role: "Wellness Coach & Trainer",
+    role: "Psychologist & Mental Health Counsellor",
     bio: "Leads workshops and training, helping individuals learn and grow.",
     avStyle: { background: "linear-gradient(135deg,var(--green),#3D9B1C)" },
   },
