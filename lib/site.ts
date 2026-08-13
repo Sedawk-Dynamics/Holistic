@@ -74,6 +74,15 @@ export const CONTACT = {
   hours: "Open daily · 10:00 AM – 8:00 PM",
 } as const;
 
+/** Social profiles. "#" means no account has been supplied for that network yet. */
+export const SOCIAL_URLS = {
+  Facebook: "https://www.facebook.com/holistichealingpathways",
+  Instagram: "https://www.instagram.com/hhpindia/",
+  YouTube: "#",
+  X: "https://x.com/hhpindia1",
+  LinkedIn: "#",
+} as const;
+
 export const FOOTER_BLURB =
   "Empowering lives through holistic healing — integrating ancient wisdom with modern psychology for emotional wellbeing and inner peace.";
 

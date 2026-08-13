@@ -1,3 +1,5 @@
+import { SOCIAL_URLS } from "@/lib/site";
+
 /* Brand glyphs drawn in the same stroked, 24×24 style as the rest of the site's
    icons, so they sit consistently inside the footer's circular tiles. */
 const ICONS = {
@@ -34,7 +36,7 @@ const ICONS = {
 
 export type SocialName = keyof typeof ICONS;
 
-/** Social row in the footer. Hrefs are placeholders in the source site. */
+/** Social row in the footer. Networks without a profile yet stay on "#". */
 export function SocialLinks({
   networks = ["Facebook", "Instagram", "YouTube", "X", "LinkedIn"],
 }: {
@@ -42,20 +44,31 @@ export function SocialLinks({
 }) {
   return (
     <div className="socials">
-      {networks.map((name) => (
-        <a key={name} href="#" aria-label={name}>
-          <svg
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
+      {networks.map((name) => {
+        const href = SOCIAL_URLS[name];
+        // Placeholders stay in-tab: opening "#" in a new tab yields a blank one.
+        const external = href !== "#";
+        return (
+          <a
+            key={name}
+            href={href}
+            aria-label={name}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
           >
-            {ICONS[name]}
-          </svg>
-        </a>
-      ))}
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              {ICONS[name]}
+            </svg>
+          </a>
+        );
+      })}
     </div>
   );
 }

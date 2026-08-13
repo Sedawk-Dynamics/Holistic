@@ -1718,6 +1718,51 @@
   color: rgba(61, 21, 120, 0.68);
   font-size: 15px;
 }
+.p-psychology .guide .glead {
+  font-size: 16px;
+  color: rgba(61, 21, 120, 0.78);
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.p-psychology .guide .gpoints {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+.p-psychology .guide .gpoints li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.p-psychology .guide .gpoints .gi {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(200, 154, 43, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.p-psychology .guide .gpoints b {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 3px;
+}
+.p-psychology .guide .gpoints p {
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+@media (max-width: 620px) {
+  .p-psychology .guide .gpoints li {
+    text-align: left;
+  }
+}
 @media (max-width: 620px) {
   .p-psychology .guide {
     grid-template-columns: 1fr;

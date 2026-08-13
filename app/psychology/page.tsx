@@ -53,6 +53,34 @@ const STEPS = [
   },
 ];
 
+function Check({ stroke }: { stroke: string }) {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="2.6">
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+}
+
+/** The founder bio, one paragraph per point. Labels are ours, prose is verbatim. */
+const GUIDE_POINTS = [
+  {
+    k: "Background & experience",
+    p: "With a Master's degree in Psychology and over seven years of experience working in the field of mental health and emotional well-being, she supports adolescents and adults through life's many challenges, including anxiety, stress, relationship difficulties, self-esteem issues, emotional overwhelm, grief, life transitions, and personal growth.",
+  },
+  {
+    k: "Her approach",
+    p: "Her therapeutic approach is warm and deeply person-centred. She works to understand the experiences and beliefs that shape a person's inner world. She believes that every behaviour serves a purpose, and together with her clients, she gently explores the deeper needs beneath those behavioural patterns to create meaningful and lasting change.",
+  },
+  {
+    k: "Meditation & breathwork",
+    p: "Shreyasi also draws upon her extensive experience as an Art of Living meditation teacher and mental health facilitator. Where appropriate and aligned with a client's goals, she integrates evidence-based psychological practices with meditation and breathwork to support holistic well-being. Her work is grounded in the belief that science and spirituality can complement one another, helping individuals cultivate resilience and inner peace.",
+  },
+  {
+    k: "The space she holds",
+    p: "She strives to create a safe and compassionate space where clients can explore their thoughts and emotions at their own pace.",
+  },
+];
+
 const INTERESTS = [
   "Psychology",
   "Bach Flower Therapy",
@@ -311,37 +339,24 @@ export default function PsychologyPage() {
             <div>
               <span className="eyebrow">Your Guide</span>
               <h3 style={{ marginTop: 8 }}>Shreyasi Walia</h3>
-              <p>
+              <p className="glead">
                 <strong>Shreyasi Walia</strong> is a psychologist, mental health therapist, and
                 meditation teacher, who believes that lasting change begins with feeling truly
                 seen, heard, and understood.
               </p>
-              <p>
-                With a Master&apos;s degree in Psychology and over seven years of experience
-                working in the field of mental health and emotional well-being, she supports
-                adolescents and adults through life&apos;s many challenges, including anxiety,
-                stress, relationship difficulties, self-esteem issues, emotional overwhelm,
-                grief, life transitions, and personal growth.
-              </p>
-              <p>
-                Her therapeutic approach is warm and deeply person-centred. She works to
-                understand the experiences and beliefs that shape a person&apos;s inner world.
-                She believes that every behaviour serves a purpose, and together with her
-                clients, she gently explores the deeper needs beneath those behavioural patterns
-                to create meaningful and lasting change.
-              </p>
-              <p>
-                Shreyasi also draws upon her extensive experience as an Art of Living meditation
-                teacher and mental health facilitator. Where appropriate and aligned with a
-                client&apos;s goals, she integrates evidence-based psychological practices with
-                meditation and breathwork to support holistic well-being. Her work is grounded
-                in the belief that science and spirituality can complement one another, helping
-                individuals cultivate resilience and inner peace.
-              </p>
-              <p>
-                She strives to create a safe and compassionate space where clients can explore
-                their thoughts and emotions at their own pace.
-              </p>
+              <ul className="gpoints">
+                {GUIDE_POINTS.map((point) => (
+                  <li key={point.k}>
+                    <span className="gi">
+                      <Check stroke="#C89A2B" />
+                    </span>
+                    <div>
+                      <b>{point.k}</b>
+                      <p>{point.p}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
         </div>
