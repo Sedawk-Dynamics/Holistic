@@ -619,17 +619,7 @@ export default function HomePage() {
                 </Reveal>
               ))}
             </div>
-            <p
-              style={{
-                textAlign: "center",
-                marginTop: 26,
-                color: "rgba(61,21,120,.45)",
-                fontSize: 13,
-                fontStyle: "italic",
-              }}
-            >
-              Sample testimonials — replace with your clients&apos; real words before going live.
-            </p>
+
           </div>
         </section>
 
