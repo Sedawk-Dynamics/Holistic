@@ -44,7 +44,7 @@ export default async function TopicPage({ params }: Params) {
   return (
     <div className="p-nadi">
       <ScrollProgress />
-      <Header shopHref={`${ROUTES.nadi}#enrol`} />
+      <Header />
 
       <section className="vhero">
         <div className="wrap">

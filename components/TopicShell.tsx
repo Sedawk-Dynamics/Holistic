@@ -311,7 +311,7 @@ export function TopicShell({ content }: { content: ShellContent }) {
   return (
     <div className="p-nadi">
       <ScrollProgress />
-      <Header shopHref={`${ROUTES.nadi}#enrol`} />
+      <Header />
 
       {/* ===== HERO ===== */}
       <section className="cg-hero">

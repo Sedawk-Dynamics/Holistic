@@ -3,20 +3,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { LMS_URL, LOGO_ALT, LOGO_HEADER, NAV_LINKS, ROUTES } from "@/lib/site";
+import { LMS_URL, LOGO_ALT, LOGO_HEADER, NAV_LINKS, ROUTES, SHOP_URL } from "@/lib/site";
 
 type HeaderProps = {
   /** Where the logo points. Home links to its own hero anchor. */
   brandHref?: string;
-  /** Home and Nadi scroll to a section instead of leaving the page. */
-  shopHref?: string;
   /** Contact scrolls to its own form instead of leaving the page. */
   bookHref?: string;
 };
 
 export function Header({
   brandHref = ROUTES.home,
-  shopHref = "/#products",
   bookHref = ROUTES.contact,
 }: HeaderProps) {
   const pathname = usePathname();
@@ -68,9 +65,9 @@ export function Header({
           <a href={LMS_URL} className="pill pill-purple">
             Login
           </a>
-          <Link href={shopHref} className="pill pill-gold">
+          <a href={SHOP_URL} className="pill pill-gold">
             Shop
-          </Link>
+          </a>
           <Link href={bookHref} className="btn btn-primary">
             Book a Session
           </Link>

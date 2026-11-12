@@ -383,7 +383,7 @@ export default function NadiPage() {
   return (
     <div className="p-nadi">
       <ScrollProgress />
-      <Header shopHref="#enrol" />
+      <Header />
 
       {/* ===== HERO ===== */}
       <section className="hero" id="home" style={{ padding: "80px 0 96px" }}>

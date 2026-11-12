@@ -50,6 +50,9 @@ export const NAV_LINKS = [
 
 export const LMS_URL = "https://lms.hhpf.in/";
 
+/** Every "Shop" button sends visitors to the external product store. */
+export const SHOP_URL = "https://bachflowertherapy.hhpf.in/#products";
+
 /**
  * Absolute destinations for the footer's link columns. These deliberately leave
  * the current origin — a click from staging or localhost lands on the live site.

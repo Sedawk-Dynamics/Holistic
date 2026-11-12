@@ -8,7 +8,7 @@ import { CountUp } from "@/components/CountUp";
 import { HeroPetals } from "@/components/HeroPetals";
 import { ContactParticles } from "@/components/ContactParticles";
 import { FormNoticeButton } from "@/components/FormNoticeButton";
-import { CONTACT, SITE } from "@/lib/site";
+import { CONTACT, SHOP_URL, SITE } from "@/lib/site";
 import "./home.css";
 
 export const metadata: Metadata = {
@@ -53,21 +53,25 @@ const PRODUCTS = [
     img: "/images/bach-flower-remedies.webp",
     h: "Bach Flower Remedies",
     p: "Customized essence blends matched to your unique emotional state.",
+    price: "₹2,000",
   },
   {
     img: "/images/healing-oil.webp",
     h: "Healing Oil",
     p: "A soothing Bach Flower blend to calm and restore everyday balance.",
+    price: "₹2,000",
   },
   {
     img: "/images/hair-growth-oil.webp",
     h: "Hair Growth Oil",
     p: "An Ayurvedic Jadibuti formulation to nourish and strengthen hair.",
+    price: "₹899",
   },
   {
     img: "/images/pain-relief-oil.webp",
     h: "Pain Relief Oil",
     p: "A targeted Bach Flower blend formulated for natural relief.",
+    price: "₹2,000",
   },
 ];
 
@@ -144,7 +148,7 @@ export default function HomePage() {
     <RevealScope threshold={REVEAL_THRESHOLD}>
       <div className="p-home">
         <ScrollProgress />
-        <Header brandHref="#home" shopHref="#products" />
+        <Header brandHref="#home" />
 
         {/* ===== HERO ===== */}
         <section className="hero" id="home" style={{ padding: 0 }}>
@@ -543,8 +547,8 @@ export default function HomePage() {
                   <div className="prod-body">
                     <h4>{product.h}</h4>
                     <p>{product.p}</p>
-                    {/* Placeholder until the Razorpay payment links exist. */}
-                    <a href="#" className="prod-buy">
+                    <div className="prod-price">{product.price}</div>
+                    <a href={SHOP_URL} className="prod-buy">
                       Buy now
                     </a>
                   </div>

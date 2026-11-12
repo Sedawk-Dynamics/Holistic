@@ -937,6 +937,9 @@
   border-radius: 22px;
   overflow: hidden;
   transition: 0.35s;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(61, 21, 120, 0.06);
 }
 .p-home .prod:hover {
   transform: translateY(-6px);
@@ -961,6 +964,20 @@
 }
 .p-home .prod-body {
   padding: 22px 22px 26px;
+  /* Stretch so prices and buttons line up across cards with uneven copy. */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.p-home .prod-body p {
+  flex: 1;
+}
+.p-home .prod-price {
+  margin-top: 16px;
+  font-family: var(--heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--purple);
 }
 .p-home .prod h4 {
   font-family: var(--body);

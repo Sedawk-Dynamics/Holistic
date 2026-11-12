@@ -105,7 +105,7 @@ export function TopicPage({ content }: { content: TopicContent }) {
   return (
     <div className="p-nadi">
       <ScrollProgress />
-      <Header shopHref={`${ROUTES.nadi}#enrol`} />
+      <Header />
 
       {/* ===== HERO ===== */}
       <section className="cg-hero">
