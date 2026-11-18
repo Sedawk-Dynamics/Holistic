@@ -48,7 +48,8 @@ export const NAV_LINKS = [
   { href: ROUTES.contact, label: "Contact" },
 ];
 
-export const LMS_URL = "https://lms.hhpf.in/";
+/** Student login for the training courses (header button + home page band). */
+export const LMS_URL = "https://app.hhpf.in/login.php";
 
 /** Every "Shop" button sends visitors to the external product store. */
 export const SHOP_URL = "https://bachflowertherapy.hhpf.in/#products";

@@ -62,8 +62,8 @@ export function Header({
           )}
         </nav>
         <div className="nav-cta">
-          <a href={LMS_URL} className="pill pill-purple">
-            Login
+          <a href={LMS_URL} className="pill pill-purple" style={{ whiteSpace: "nowrap" }}>
+            Login to LMS
           </a>
           <a href={SHOP_URL} className="pill pill-gold">
             Shop

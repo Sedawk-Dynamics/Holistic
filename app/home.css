@@ -921,6 +921,44 @@
     margin: 0 auto;
   }
 }
+/* LMS login band under the Why grid */
+.p-home .lms-band {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 40px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 154, 43, 0.35);
+}
+.p-home .lms-band h3 {
+  font-family: var(--body);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.p-home .lms-band p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.62);
+}
+.p-home .lms-band .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .p-home .lms-band {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 480px;
+    margin: 32px auto 0;
+    padding: 24px;
+  }
+}
 
 /* ============ PRODUCTS ============ */
 .p-home #products {

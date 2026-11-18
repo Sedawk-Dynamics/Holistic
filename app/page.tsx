@@ -8,7 +8,7 @@ import { CountUp } from "@/components/CountUp";
 import { HeroPetals } from "@/components/HeroPetals";
 import { ContactParticles } from "@/components/ContactParticles";
 import { FormNoticeButton } from "@/components/FormNoticeButton";
-import { CONTACT, SHOP_URL, SITE } from "@/lib/site";
+import { CONTACT, LMS_URL, SHOP_URL, SITE } from "@/lib/site";
 import "./home.css";
 
 export const metadata: Metadata = {
@@ -522,6 +522,31 @@ export default function HomePage() {
                 </Reveal>
               ))}
             </div>
+
+            <Reveal className="lms-band">
+              <div>
+                <h3>Already enrolled in a training program?</h3>
+                <p>
+                  Access your Bach Flower Therapy and Nadi Astrology course lessons, materials
+                  and progress on our learning platform.
+                </p>
+              </div>
+              <a href={LMS_URL} className="btn btn-gold">
+                Login to LMS
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </Reveal>
           </div>
         </section>
 
