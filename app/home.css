@@ -3,6 +3,9 @@
 
 .p-home {
   line-height: 1.6;
+  /* Decorative blobs/rings (services .blob, about .ring) extend past the edge
+     on phones; clip them so the page never scrolls sideways. */
+  overflow-x: clip;
 }
 .p-home h1,
 .p-home h2,

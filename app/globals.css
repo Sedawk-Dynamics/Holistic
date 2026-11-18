@@ -136,3 +136,161 @@ a {
     transform: scale(1.12);
   }
 }
+
+/* ============ SHARED HEADER LAYOUT ============
+   Every page stylesheet carries its own copy of the header rules, scoped to its
+   page class (.p-home, .p-about, ...). These #hdr rules sit on top of all of
+   them (an id outranks the page class) so the header lines up the same way
+   everywhere and on every screen size. */
+#hdr .nav {
+  gap: 24px;
+}
+#hdr .brand {
+  min-width: 0;
+  flex-shrink: 0;
+}
+#hdr .brand img {
+  height: 56px;
+  width: auto;
+  max-width: none;
+}
+#hdr nav.links {
+  flex-wrap: nowrap;
+}
+#hdr nav.links a {
+  white-space: nowrap;
+  padding: 8px 12px;
+}
+#hdr nav.links a::after {
+  left: 12px;
+  right: 12px;
+}
+/* The CTA group always sits in the right-hand column, even when the nav
+   between it and the logo is hidden on smaller screens. */
+#hdr .nav-cta {
+  grid-column: 3;
+  justify-self: end;
+  gap: 10px;
+}
+#hdr .nav-cta .pill,
+#hdr .nav-cta .btn {
+  white-space: nowrap;
+}
+#hdr .nav-cta .btn {
+  padding: 12px 24px;
+}
+#hdr .nav-mobile-only {
+  display: none;
+}
+
+/* Laptops: tighten spacing before the menu collapses. */
+@media (max-width: 1300px) {
+  #hdr .nav {
+    gap: 16px;
+  }
+  #hdr nav.links a {
+    padding: 8px 10px;
+  }
+  #hdr nav.links a::after {
+    left: 10px;
+    right: 10px;
+  }
+  #hdr .brand img {
+    height: 50px;
+  }
+}
+
+/* Tablets and phones: links move into the menu. Login to LMS and
+   Book a Session stay visible in the bar; Shop moves into the menu. */
+@media (max-width: 1180px) {
+  #hdr nav.links {
+    display: none;
+  }
+  #hdr .menu-btn {
+    display: inline-flex;
+  }
+  #hdr .nav-cta .pill-gold {
+    display: none;
+  }
+  #hdr .nav-cta .nav-lms-pill {
+    display: inline-flex;
+  }
+  #hdr nav.links.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: #fff;
+    border-bottom: 1px solid var(--border, rgba(61, 21, 120, 0.1));
+    padding: 12px 24px 20px;
+    gap: 2px;
+    box-shadow: 0 12px 30px rgba(61, 21, 120, 0.12);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+  #hdr nav.links.open a {
+    padding: 12px 8px;
+    font-size: 15px;
+  }
+  #hdr nav.links.open a::after {
+    display: none;
+  }
+  #hdr nav.links.open .nav-mobile-only {
+    display: block;
+  }
+  /* Book a Session is still in the bar at this width. */
+  #hdr nav.links.open .nav-book {
+    display: none;
+  }
+  #hdr nav.links.open .nav-lms {
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #3d1578, #5b2a9e);
+    border-radius: 999px;
+    font-weight: 600;
+  }
+}
+
+/* Phones: logo + Login to LMS + menu button. Book a Session moves into the menu. */
+@media (max-width: 640px) {
+  #hdr .nav {
+    gap: 10px;
+  }
+  #hdr .brand img {
+    height: 42px;
+  }
+  #hdr .nav-cta {
+    gap: 8px;
+  }
+  #hdr .nav-cta .nav-book-btn {
+    display: none;
+  }
+  #hdr .nav-cta .nav-lms-pill {
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  #hdr .menu-btn {
+    padding: 8px;
+  }
+  #hdr nav.links.open {
+    padding: 10px 16px 18px;
+  }
+  #hdr nav.links.open .nav-book {
+    display: block;
+  }
+}
+
+@media (max-width: 360px) {
+  #hdr .brand img {
+    height: 36px;
+  }
+  #hdr .nav-cta .nav-lms-pill {
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+}

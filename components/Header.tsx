@@ -60,15 +60,33 @@ export function Header({
               </Link>
             )
           )}
+          {/* Only shown inside the opened mobile menu (see #hdr rules in globals.css). */}
+          <a href={SHOP_URL} className="nav-mobile-only" onClick={() => setMenuOpen(false)}>
+            Shop
+          </a>
+          <Link
+            href={bookHref}
+            className="nav-mobile-only nav-book"
+            onClick={() => setMenuOpen(false)}
+          >
+            Book a Session
+          </Link>
+          <a
+            href={LMS_URL}
+            className="nav-mobile-only nav-lms"
+            onClick={() => setMenuOpen(false)}
+          >
+            Login to LMS
+          </a>
         </nav>
         <div className="nav-cta">
-          <a href={LMS_URL} className="pill pill-purple" style={{ whiteSpace: "nowrap" }}>
+          <a href={LMS_URL} className="pill pill-purple nav-lms-pill">
             Login to LMS
           </a>
           <a href={SHOP_URL} className="pill pill-gold">
             Shop
           </a>
-          <Link href={bookHref} className="btn btn-primary">
+          <Link href={bookHref} className="btn btn-primary nav-book-btn">
             Book a Session
           </Link>
           <button
